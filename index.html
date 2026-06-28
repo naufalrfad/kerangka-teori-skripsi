@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagan Kerangka Pemikiran Skripsi</title>
+    <style>
+        :root {
+            --primary-color: #0080a5;
+            --secondary-color: #e6f4f8;
+            --dark-color: #2c3e50;
+            --border-color: #b3d7e2;
+            --text-muted: #555;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fbfd;
+            margin: 0;
+            padding: 20px;
+            color: var(--dark-color);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Flowchart Styles */
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .section-box {
+            width: 100%;
+            background: #ffffff;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,128,165,0.05);
+        }
+
+        .section-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            color: white;
+            background-color: var(--primary-color);
+            margin: -20px -20px 15px -20px;
+            padding: 10px 15px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section-title span.tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Grid inside boxes */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .grid-7 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .grid-7 .aspect-item {
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            text-align: center;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .grid-7 .aspect-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .sub-box {
+            background-color: #fcfdfe;
+            border: 1px dashed var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 0.88rem;
+            line-height: 1.4;
+        }
+
+        .sub-box strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Arrow connectors */
+        .arrow {
+            width: 2px;
+            height: 35px;
+            background-color: var(--primary-color);
+            position: relative;
+            margin: 5px 0;
+        }
+
+        .arrow::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid var(--primary-color);
+        }
+
+        .citation {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .grid-7 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid-7 .aspect-item.span-2 {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>KERANGKA PEMIKIRAN</h2>
+    <h3>Analisis Tantangan Pengelolaan Layanan Kesehatan Mental Berbasis Universitas</h3>
+
+    <div class="flowchart">
+        
+        <div class="section-box">
+            <div class="section-title">
+                <span>1. Kondisi Ideal & Realitas Fenomena</span>
+                <span class="tag">Input / Masalah</span>
+            </div>
+            <div class="grid-3">
+                <div class="sub-box">
+                    <strong>Urgensi Kesehatan Mental</strong>
+                    Tingginya angka distres, kecemasan, dan depresi pada kelompok usia mahasiswa global maupun nasional.
+                    <span class="citation">(WHO, 2024; Global Burden of Disease Study 2021 ASEAN Mental Health Collaborators, 2025; Setyanto dkk., 2023; Riwukaho dkk., 2022)</span>
+                </div>
+                <div class="sub-box">
+                    <strong>Konteks Kelembagaan PTN-BH</strong>
+                    Perubahan status UNS menjadi PTN-BH yang menuntut otonomi mandiri dalam penataan tata kelola organisasi non-akademik.
+                    <span class="citation">(Pemerintah RI, 2020; UNS, 2022)</span>
+                </div>
+                <div class="sub-box">
+                    <strong>Realitas Pengelolaan</strong>
+                    Hambatan manajemen unit multi-aktor dan tersebar pada Subdirektorat Layanan Konseling dan Disabilitas Mahasiswa "Sasmita Jiwa".
+                    <span class="citation">(Humas UNS, 2025a, 2025b)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow"></div>
+
+        <div class="section-box">
+            <div class="section-title">
+                <span>2. Pendekatan Metodologi & Pisau Analisis</span>
+                <span class="tag">Proses Eksplorasi</span>
+            </div>
+            <div class="grid-3" style="grid-template-columns: 1fr 2fr; gap: 20px;">
+                <div class="sub-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <strong>Desain Penelitian</strong>
+                        Pendekatan Kualitatif Deskriptif dengan jenis studi kasus eksploratif pada <i>natural setting</i> tanpa manipulasi variabel.
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <strong>Sumber Data</strong>
+                        Wawancara semi-terstruktur (Pengelola), Observasi Lapangan, dan Studi Dokumen internal (SOP/SK Pedoman Sasmita Jiwa).
+                    </div>
+                </div>
+                <div class="sub-box">
+                    <strong>Pisau Analisis: 7 Aspek UBMHS <span style="font-weight: normal; color: #555; font-size: 0.85rem;">(Sintesis Teori Barden & Caleb, 2019 & Roberts, 2018)</span></strong>
+                    
+                    <div class="grid-7">
+                        <div class="aspect-item">1. Struktur Terintegrasi & Responsif</div>
+                        <div class="aspect-item">2. Aksesibilitas & Triase Bertingkat</div>
+                        <div class="aspect-item">3. Tata Kelola & Kebijakan PTN-BH</div>
+                        <div class="aspect-item">4. Promosi & Intervensi Populasi</div>
+                        <div class="aspect-item">5. Dukungan Komunitas & Peer Support</div>
+                        <div class="aspect-item">6. SDM & Pencegahan Burnout</div>
+                        <div class="aspect-item span-2">7. Monitoring & Evaluasi Mutu Berkelanjutan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow"></div>
+
+        <div class="section-box" style="border-color: #27ae60; box-shadow: 0 2px 8px rgba(39,174,96,0.05);">
+            <div class="section-title" style="background-color: #27ae60;">
+                <span>3. Metode Analisis Data & Hasil</span>
+                <span class="tag" style="background: rgba(0,0,0,0.15)">Output</span>
+            </div>
+            <div class="grid-3" style="grid-template-columns: 1fr 2fr;">
+                <div class="sub-box" style="border-color: #a3e4d7;">
+                    <strong>Strategi Analisis</strong>
+                    Analisis Tematik <i>(Thematic Analysis)</i> model Braun dan Clarke (2017) melalui pengodean fungsional data transkrip teks secara iteratif.
+                </div>
+                <div class="sub-box" style="background-color: #f4fbf7; border-color: #a3e4d7;">
+                    <strong>Hasil Akhir (Temuan Penelitian)</strong>
+                    Deskripsi mendalam dan narasi komprehensif mengenai pola tantangan operasional, hambatan struktural birokrasi, serta dinamika strategi adaptasi pengelola Subdirektorat "Sasmita Jiwa" dalam menyelenggarakan layanan kesehatan mental berbasis universitas di UNS.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
